@@ -6,7 +6,6 @@ class MainPage extends React.Component {
 
   render(){
     return(<div className="main_page">
-      Main Page
       <div className="folders">
       {this.props.folders.map(folder=><div className="folder">Link to {folder.name}</div>)}
         <button>Add Folder</button>
