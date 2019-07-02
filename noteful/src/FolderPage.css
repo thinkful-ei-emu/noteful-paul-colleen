@@ -1,7 +1,13 @@
-.folders > .highlight {
+.folders > .highlight > a {
 background-color: lightblue;
 }
-
+.folders > .highlight {
+  background-color: lightblue;
+  }
 .folder_page{
   height:calc(100%);
+}
+
+a {
+  text-decoration: none;
 }

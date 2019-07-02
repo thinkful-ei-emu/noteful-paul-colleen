@@ -1,9 +1,13 @@
 import React from "react";
 import Note from "./Note";
 import './FolderPage.css';
+import {Link} from 'react-router-dom';
 
 class FolderPage extends React.Component {
   render() {
+    const currentFolder=this.props.folders.find(folder => folder.name === this.props.currentFolder
+      )
+      if(currentFolder === undefined){return <p>This isn't a link</p>}
     return (
       <div className="folder_page">
         <div className="folders">
@@ -15,7 +19,7 @@ class FolderPage extends React.Component {
                   : "folder"
               }
             >
-              Link to {folder.name}
+              <Link to={`/folder/${folder.name}`}>{folder.name}</Link>
             </div>
           ))}
           <button>Add Folder</button>

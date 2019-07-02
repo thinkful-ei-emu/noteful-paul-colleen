@@ -30,11 +30,7 @@ class App extends React.Component {
                 folders={this.props.store.folders}
                 notes={this.props.store.notes}
                 currentFolder={match.params.folderName}
-                currentFolderId={
-                  this.props.store.folders.find(
-                    folder => folder.name === match.params.folderName
-                  ).id
-                }
+               
               />
             )}
           />
@@ -46,7 +42,6 @@ class App extends React.Component {
                 notes={this.props.store.notes}
                 folders={this.props.store.folders}
                 currentName={match.params.noteName}
-                currentFolderId={this.props.store.notes.find((note) => note.name === match.params.noteName).folderId}
                 history={history}
               />
             )}
